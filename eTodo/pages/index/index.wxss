@@ -1,0 +1,90 @@
+/**index.wxss**/
+
+button {
+    border: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.todo {
+    padding-top: 16px;
+    margin-left: 16px;
+    font-size: 30rpx;
+    padding-bottom: 4rpx;
+    border-bottom: 1px solid #bdc3c7;
+}
+
+.save {
+    margin-top: 16px;
+    margin-left: 12px;
+    font-size: 20rpx;
+    color: whitesmoke;
+    background-color: #3498db;
+}
+
+.userinfo {
+    display: inline-block;
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+}
+
+.userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    /* margin: 20rpx; */
+    border-radius: 50%;
+}
+
+.userinfo-nickname {
+    color: #aaa;
+}
+
+.list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* flex-wrap: nowrap; */
+    margin: 20rpx;
+    min-height: 60px;
+     /* height: 60px;  */
+    background-color: #03a9f4;
+    border-radius: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.checkList {
+    display: flex;
+    flex-wrap: nowrap;
+     justify-content: flex-start; 
+     align-items: center; 
+    margin: 20rpx;
+    min-height: 60px;
+    background-color: #e3e3e3;
+    text-decoration: line-through;
+    border-radius: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+
+}
+
+checkbox {
+    margin: 0 8px;
+    /* width: 30%;
+    height: 50%; */
+}
+
+.plan {
+    color: #37474f;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,28 @@
+<!--index.wxml-->
+
+<view class='header'>
+    <!--用户头像  -->
+    <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+        <block wx:else>
+            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+            <!-- <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+        </block>
+    </view>
+
+    <!--输入内容  -->
+    <view class="section todo">
+        <input bindinput='todoHandle' placeholder-style="color:#95a5a6" placeholder="请输入待办内容" value="{{todo}}" />
+    </view>
+
+    <!--保存按钮  -->
+    <button class="{{isHidden}}" bindtap='saveHandle'>保存</button>
+</view>
+
+<!--todo列表  -->
+<view wx:for="{{todos}}" wx:key="todo" class="{{todos[index].checked != true ? 'section list':'section checkList'}}" bindlongpress='longTap' data-index='{{index}}'>
+    <checkbox-group bindchange="checkboxChangeHandle" data-count='{{index}}'>
+        <checkbox checked="{{todos[index].checked}}" />
+        <text class='plan'>{{todos[index].todo}}</text>
+    </checkbox-group>
+</view>
